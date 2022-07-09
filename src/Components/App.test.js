@@ -1,7 +1,8 @@
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, getByText } from '@testing-library/react';
 import userEvent from "@testing-library/user-event";
 import App from './App';
 
+jest.mock('./MockComponent', () => () => (<div>Hello, World!</div>));
 
 test('ToDo', () => {
 
@@ -32,5 +33,9 @@ test("user-events allows users to add...", () => {
 
   userEvent.type(input, "Learn spanish");
   userEvent.click(button);
-
 });
+
+test("trying out mock component", () => {
+  const { getByText, getByLabelText } = render(<App />)
+  getByText('Hello, World!')
+})

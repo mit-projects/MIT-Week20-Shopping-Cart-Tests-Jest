@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Todo from './todo';
 import Form from './form';
+import MockComponent from './MockComponent'
 
 function App() {
   const [todos, setTodos] = useState([
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <div className="list-container">
+      <MockComponent />
       <h2>To Do List</h2>
       {todos.length < 1 && <div className="empty-list">The list is empty. <br /> Add some to-do's below!</div>}
       {todos.map((todo, index) => <Todo key={index} todo={todo} index={index} completeTodo={completeTodo} removeTodo={removeTodo} />)}
