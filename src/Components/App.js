@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Todo from './todo';
 import Form from './form';
 import MockComponent from './MockComponent'
+import { api } from './api';
 
 function App() {
   const [todos, setTodos] = useState([
@@ -11,7 +12,10 @@ function App() {
 
   const addTodo = (value) => {
     if (!value) return;
-    setTodos([...todos, { text: value, completed: false }]);
+    api.createItem(value).then((persistedItem) => {
+      setTodos([...todos, { text: value, completed: false }]);
+    })
+
   }
 
   const removeTodo = (index) => {
