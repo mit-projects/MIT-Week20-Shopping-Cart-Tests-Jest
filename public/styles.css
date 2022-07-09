@@ -1,0 +1,72 @@
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    background-color: bisque;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: left;
+    min-width: 330px;
+}
+
+h1 {
+    font-weight: 100;
+}
+
+.todo-item {
+    padding: 10px;
+}
+
+.form-container {
+    margin-top: 10px;
+}
+
+.input-field {
+    width: 90%;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: none;
+    padding: 10px;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.todo-item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 300ms ease;
+}
+
+.todo-item-container:hover {
+    background-color: blanchedalmond;
+}
+
+.delete-image {
+    margin-right: 10px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.completed-container {
+    font-size: 0.8em;
+}
+
+.completed-container div {
+    color: #aaaaaa;
+}
