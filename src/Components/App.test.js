@@ -54,8 +54,8 @@ test('add item to list', async () => {
 //   userEvent.click(button);
 // });
 
-test("trying out mock component", () => {
-  const { getByText, getByLabelText } = render(<App />)
-  getByText('Hello, World!')
-})
+// test("trying out mock component", () => {
+//   const { getByText, getByLabelText } = render(<App />)
+//   getByText('Hello, World!')
+// })
 
